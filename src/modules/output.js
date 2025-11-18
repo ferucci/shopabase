@@ -1,9 +1,8 @@
 import getData from "./getData.js";
+import renderGoods from "./renderGoods.js";
 
 export const second = () => {
-  const cartBtn = document.getElementById('cart')
-
   getData().then((data) => {
-    console.log(data)
+    renderGoods(data)
   })
 }
