@@ -7,7 +7,7 @@ export default function Products() {
 
   const handleClick = (e: React.MouseEvent) => {
     if (!productId) {
-      e.preventDefault(); // предотвращаем переход если ID пустой
+      e.preventDefault();
       alert("Please enter product ID");
     }
   };
