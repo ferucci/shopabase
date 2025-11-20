@@ -12,6 +12,12 @@ export const getData = async (query: Query) => {
       return false
     }
 
+    if (query.search) {
+      if (!product.title.includes(query.search)) {
+        return false
+      }
+    }
+
     return true;
   });
 }

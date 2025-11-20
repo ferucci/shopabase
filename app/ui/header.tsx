@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Filter } from "./Filter"
+import { Search } from "./Search"
 
 export const Header = () => {
   return (
@@ -17,15 +18,8 @@ export const Header = () => {
                   <div className="d-flex control-wrapper">
 
                     <Filter />
+                    <Search />
 
-                    <div className="search">
-                      <div className="search-wrapper">
-                        <input className="search-wrapper_input" type="text" />
-                      </div>
-                      <div className="search-btn">
-                        <button></button>
-                      </div>
-                    </div>
                   </div>
                   <a href="#" id="cart">
                     <span className="counter">0</span>
