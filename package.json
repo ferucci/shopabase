@@ -1,18 +1,23 @@
 {
-  "name": "shop",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "shop-next",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build": "webpack --mode=production",
-    "watch": "webpack --watch --mode=development"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
+  "dependencies": {
+    "next": "16.0.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
   "devDependencies": {
-    "webpack": "^5.102.1",
-    "webpack-cli": "^6.0.1"
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "sass": "^1.94.2",
+    "typescript": "^5"
   }
 }
