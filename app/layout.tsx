@@ -1,4 +1,5 @@
 import localFont from 'next/font/local';
+import { CartProvider } from './providers/CartProvider';
 import './scss/style.scss';
 import { Basket } from './ui/basket';
 import { Header } from './ui/header';
@@ -28,11 +29,13 @@ export default function RootLayout({
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous"></link>
       </head>
       <body className={GTEestiProText.className}>
-        <Header></Header>
-        <Basket></Basket>
-        <main>
-          {children}
-        </main>
+        <CartProvider>
+          <Header></Header>
+          <Basket></Basket>
+          <main>
+            {children}
+          </main>
+        </CartProvider>
       </body>
     </html>
   );
